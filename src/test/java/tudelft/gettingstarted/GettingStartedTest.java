@@ -1,27 +1,28 @@
 package tudelft.gettingstarted;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class GettingStartedTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class GettingStartedTest {
 
     @Test
-    public void addFiveTo20() {
+    void addFiveTo20() {
         int result = new GettingStarted().addFive(20);
-        Assertions.assertEquals(25,result);
+        assertEquals(25, result);
     }
 
 //    UNCOMMENT THE CODE BELOW, AND FILL THE GAPS!
 
-//    @Test
-//    public void addFiveToZero() {
-//        int result = new GettingStarted().addFive(???);
-//        Assertions.assertEquals(???, result);
-//    }
-//
-//    @Test
-//    public void addFiveToMinus20() {
-//        int result = new GettingStarted().addFive(???);
-//        Assertions.assertEquals(????,result);
-//    }
+    @Test
+    void addFiveToZero() {
+        int result = new GettingStarted().addFive(0);
+        assertEquals(5, result);
+    }
+
+    @Test
+    void addFiveToMinus20() {
+        int result = new GettingStarted().addFive(-20);
+        assertEquals(-15, result);
+    }
 }
